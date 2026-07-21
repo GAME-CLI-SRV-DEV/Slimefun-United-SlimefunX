@@ -1604,7 +1604,7 @@ public final class SlimefunItems {
             "&ftrade with Villagers");
     public static final SlimefunItemStack SYNTHETIC_SAPPHIRE = new SlimefunItemStack(
             "SYNTHETIC_SAPPHIRE",
-            HeadTexture.SAPPHIRE,
+            Material.LAPIS_LAZULI,
             "&bSynthetic Sapphire",
             "",
             "&fThis item can be used in a",

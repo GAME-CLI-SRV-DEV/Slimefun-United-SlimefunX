@@ -898,10 +898,10 @@ public final class SlimefunItemSetup {
                             null,
                             SlimefunItems.ZINC_INGOT.item(),
                             SlimefunItems.SULFATE.item(),
-                            SlimefunItems.COPPER_INGOT.item(),
+                            new ItemStack(Material.COPPER_INGOT),
                             SlimefunItems.ZINC_INGOT.item(),
                             SlimefunItems.SULFATE.item(),
-                            SlimefunItems.COPPER_INGOT.item()
+                            new ItemStack(Material.COPPER_INGOT),
                         })
                 .register(plugin);
 
@@ -1204,16 +1204,16 @@ public final class SlimefunItemSetup {
                 })
                 .register(plugin);
 
-        new SlimefunItem(itemGroups.resources, SlimefunItems.SYNTHETIC_SAPPHIRE, RecipeType.SMELTERY, new ItemStack[] {
-                    SlimefunItems.ALUMINUM_DUST.item(),
-                    new ItemStack(Material.GLASS),
-                    new ItemStack(Material.GLASS_PANE),
-                    SlimefunItems.ALUMINUM_INGOT.item(),
-                    new ItemStack(Material.LAPIS_LAZULI),
-                    null,
-                    null,
-                    null,
-                    null
+          new SlimefunItem(itemGroups.resources, SlimefunItems.SYNTHETIC_SAPPHIRE, RecipeType.SMELTERY, new ItemStack[] {
+                      SlimefunItems.ALUMINUM_DUST.item(), 
+                      new ItemStack(Material.GLASS), 
+                      new ItemStack(Material.GLASS_PANE), 
+                      SlimefunItems.ALUMINUM_INGOT.item(), 
+                      SlimefunItems.SALT.item(), 
+                      SlimefunItems.SULFATE.item(), 
+                      new ItemStack(Material.CALCITE), 
+                      null, 
+                      null
                 })
                 .setUseableInWorkbench(true)
                 .register(plugin);
@@ -1307,9 +1307,9 @@ public final class SlimefunItemSetup {
                                 .item())
                 .register(plugin);
 
-        new SlimefunItem(itemGroups.resources, SlimefunItems.COPPER_DUST, RecipeType.ORE_WASHER, new ItemStack[] {
-                    SlimefunItems.SIFTED_ORE.item(), null, null, null, null, null, null, null, null
-                })
+        new SlimefunItem(itemGroups.resources, SlimefunItems.COPPER_DUST, RecipeType.ORE_CRUSHER,
+                new ItemStack[] {new ItemStack(Material.COPPER_ORE), null, null, null, null, null, null, null, null},
+                new SlimefunItemStack(SlimefunItems.COPPER_DUST, oreCrusher.isOreDoublingEnabled() ? 2 : 1).item())
                 .register(plugin);
 
         new SlimefunItem(itemGroups.resources, SlimefunItems.TIN_DUST, RecipeType.ORE_WASHER, new ItemStack[] {
@@ -1339,11 +1339,6 @@ public final class SlimefunItemSetup {
 
         new SlimefunItem(itemGroups.resources, SlimefunItems.MAGNESIUM_DUST, RecipeType.ORE_WASHER, new ItemStack[] {
                     SlimefunItems.SIFTED_ORE.item(), null, null, null, null, null, null, null, null
-                })
-                .register(plugin);
-
-        new SlimefunItem(itemGroups.resources, SlimefunItems.COPPER_INGOT, RecipeType.SMELTERY, new ItemStack[] {
-                    SlimefunItems.COPPER_DUST.item(), null, null, null, null, null, null, null, null
                 })
                 .register(plugin);
 
@@ -2024,7 +2019,7 @@ public final class SlimefunItemSetup {
 
         new GoldIngot(itemGroups.resources, 6, SlimefunItems.GOLD_6K, RecipeType.SMELTERY, new ItemStack[] {
                     SlimefunItems.GOLD_DUST.item(),
-                    SlimefunItems.GOLD_4K.item(),
+                    new ItemStack(Material.GOLD_INGOT),
                     null,
                     null,
                     null,
@@ -2033,12 +2028,6 @@ public final class SlimefunItemSetup {
                     null,
                     null
                 })
-                .register(plugin);
-
-        new GoldIngot(itemGroups.resources, 4, SlimefunItems.GOLD_4K, RecipeType.SMELTERY, new ItemStack[] {
-                    SlimefunItems.GOLD_DUST.item(), null, null, null, null, null, null, null, null
-                })
-                .setUseableInWorkbench(true)
                 .register(plugin);
 
         new SlimefunItem(itemGroups.misc, SlimefunItems.STONE_CHUNK, RecipeType.ORE_WASHER, new ItemStack[] {
@@ -4976,9 +4965,9 @@ public final class SlimefunItemSetup {
                             SlimefunItems.ELECTRO_MAGNET.item(),
                             SlimefunItems.ELECTRIC_GOLD_PAN.item(),
                             SlimefunItems.ELECTRO_MAGNET.item(),
-                            SlimefunItems.COPPER_INGOT.item(),
-                            SlimefunItems.COPPER_INGOT.item(),
-                            SlimefunItems.COPPER_INGOT.item()
+                            new ItemStack(Material.COPPER_INGOT),
+                            new ItemStack(Material.COPPER_INGOT),
+                            new ItemStack(Material.COPPER_INGOT),
                         })
                 .setCapacity(128)
                 .setEnergyConsumption(3)
@@ -5585,9 +5574,9 @@ public final class SlimefunItemSetup {
                         SlimefunItems.MULTIMETER,
                         RecipeType.ENHANCED_CRAFTING_TABLE,
                         new ItemStack[] {
-                            SlimefunItems.COPPER_INGOT.item(),
+                            new ItemStack(Material.COPPER_INGOT),
                             null,
-                            SlimefunItems.COPPER_INGOT.item(),
+                            new ItemStack(Material.COPPER_INGOT),
                             null,
                             SlimefunItems.REDSTONE_ALLOY.item(),
                             null,
