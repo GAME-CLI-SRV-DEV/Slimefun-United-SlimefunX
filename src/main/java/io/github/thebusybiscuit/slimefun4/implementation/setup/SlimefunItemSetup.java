@@ -1204,16 +1204,16 @@ public final class SlimefunItemSetup {
                 })
                 .register(plugin);
 
-          new SlimefunItem(itemGroups.resources, SlimefunItems.SYNTHETIC_SAPPHIRE, RecipeType.SMELTERY, new ItemStack[] {
-                      SlimefunItems.ALUMINUM_DUST.item(), 
-                      new ItemStack(Material.GLASS), 
-                      new ItemStack(Material.GLASS_PANE), 
-                      SlimefunItems.ALUMINUM_INGOT.item(), 
-                      SlimefunItems.SALT.item(), 
-                      SlimefunItems.SULFATE.item(), 
-                      new ItemStack(Material.CALCITE), 
-                      null, 
-                      null
+        new SlimefunItem(itemGroups.resources, SlimefunItems.SYNTHETIC_SAPPHIRE, RecipeType.SMELTERY, new ItemStack[] {
+                    SlimefunItems.ALUMINUM_DUST.item(),
+                    new ItemStack(Material.GLASS),
+                    new ItemStack(Material.GLASS_PANE),
+                    SlimefunItems.ALUMINUM_INGOT.item(),
+                    SlimefunItems.SALT.item(),
+                    SlimefunItems.SULFATE.item(),
+                    new ItemStack(Material.CALCITE),
+                    null,
+                    null
                 })
                 .setUseableInWorkbench(true)
                 .register(plugin);
@@ -1307,9 +1307,15 @@ public final class SlimefunItemSetup {
                                 .item())
                 .register(plugin);
 
-        new SlimefunItem(itemGroups.resources, SlimefunItems.COPPER_DUST, RecipeType.ORE_CRUSHER,
-                new ItemStack[] {new ItemStack(Material.COPPER_ORE), null, null, null, null, null, null, null, null},
-                new SlimefunItemStack(SlimefunItems.COPPER_DUST, oreCrusher.isOreDoublingEnabled() ? 2 : 1).item())
+        new SlimefunItem(
+                        itemGroups.resources,
+                        SlimefunItems.COPPER_DUST,
+                        RecipeType.ORE_CRUSHER,
+                        new ItemStack[] {
+                            new ItemStack(Material.COPPER_ORE), null, null, null, null, null, null, null, null
+                        },
+                        new SlimefunItemStack(SlimefunItems.COPPER_DUST, oreCrusher.isOreDoublingEnabled() ? 2 : 1)
+                                .item())
                 .register(plugin);
 
         new SlimefunItem(itemGroups.resources, SlimefunItems.TIN_DUST, RecipeType.ORE_WASHER, new ItemStack[] {
