@@ -1142,7 +1142,7 @@ public final class SlimefunItemSetup {
         new AlloyIngot(itemGroups.resources, SlimefunItems.BRASS_INGOT, new ItemStack[] {
                     SlimefunItems.COPPER_DUST.item(),
                     SlimefunItems.ZINC_DUST.item(),
-                    SlimefunItems.COPPER_INGOT.item(),
+                    new ItemStack(Material.COPPER_INGOT),
                     null,
                     null,
                     null,
